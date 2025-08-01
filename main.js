@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+const botoes = document.querySelectorAll(".botao");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+for (let i = 0; i < botoes.length; i++) {
+  botoes[i].onclick = function () {
+    for (let j = 0; j < botoes.length; j++) {
+      botoes[j].classList.remove("ativo");
+    }
 
-<body>
-    <section class="conteudo-principal">
-        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-        <div class="botoes">
-            <button class="botao ativo">Cursos na Alura</button>
-            <button class="botao">Criar projetos em Javascript</button>
-            <button class="botao">Criar um portfolio</button>
-            <button class="botao">Atualizar meu currículo</button>
-        </div>
-    </section>
-    <script src="main.js"></script>
-</body>
-
-</html>
+    botoes[i].classList.add("ativo");
+  };
+}
